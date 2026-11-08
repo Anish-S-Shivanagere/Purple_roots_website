@@ -1,0 +1,11 @@
+{
+  "name": "violet-roots-website",
+  "private": true,
+  "scripts": {
+    "convex:dev": "convex dev",
+    "convex:deploy": "convex deploy"
+  },
+  "dependencies": {
+    "convex": "^1.49.0"
+  }
+}

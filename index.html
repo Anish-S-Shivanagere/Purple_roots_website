@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Violet Roots | Purple Sweet Potatoes & Dragon Fruit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header><div class="wrap nav">
+  <button class="logo" data-go="top"> Violet Roots</button>
+  <nav>
+    <button data-go="top">Home</button>
+    <button data-go="order">Order</button>
+    <button data-go="contact">Contact</button>
+  </nav>
+</div></header>
+
+<!-- HOME -->
+<main id="home" class="view on">
+  <div class="hero">
+    <div class="farm" id="farm"><div class="sun"></div><div class="hill h1"></div><div class="hill h2"></div><div class="rows"></div></div>
+    <video id="vid" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="assets/videos/video-main.mp4" type="video/mp4">
+    </video>
+    <div class="shade"></div>
+    <div class="wrap">
+      <h1 class="hero-title"><span class="eyebrow">Violet Roots | Fresh from our farm</span><span class="typed-line"><span id="typed-text" class="typed-text" aria-hidden="true">Directly from our farms to your home.</span><span id="phrase-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></span></span></h1>
+      <p>Fresh purple sweet potatoes delivered to your kitchen.</p>
+      <div class="cta">
+        <button class="btn btn-p" data-go="order">Request to buy</button>
+        <a class="btn btn-wa wa-link" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="scroll">Scroll ↓</div>
+  </div>
+
+  <section id="about"><div class="wrap split">
+    <div class="product-gallery" role="group" aria-label="Purple sweet potato photos">
+      <figure class="gallery-main">
+        <img src="assets/images/purple-sweet-potato-1.jpeg" alt="Freshly harvested purple sweet potatoes from the farm" loading="lazy">
+        <figcaption>Fresh from our farm</figcaption>
+      </figure>
+      <div class="gallery-side">
+        <figure>
+          <img src="assets/images/purple-sweet-potato-2.jpeg" alt="Baked purple sweet potato with vivid purple flesh" loading="lazy">
+          <figcaption>Goodness inside</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/purple-sweet-potato-3.jpeg" alt="Purple sweet potatoes sliced to show their bright centers" loading="lazy">
+          <figcaption>Naturally colorful</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div>
+      <span class="tag">Our star crop</span>
+      <h2>Purple sweet potato</h2>
+      <p>With deep violet skin and flesh, this root is naturally sweet and creamy. It gets its colour from anthocyanins, the same antioxidants found in blueberries. Steam it, roast it, mash it or bake it into desserts.</p>
+      <ul class="facts">
+        <li><b>Rich in antioxidants</b>Anthocyanins give the purple colour</li>
+        <li><b>High in fibre</b>Keeps you full for longer</li>
+        <li><b>Naturally sweet</b>No added sugar needed</li>
+        <li><b>Farm fresh</b>Harvested to order</li>
+      </ul>
+    </div>
+  </div></section>
+
+  <section id="dragon-fruit" class="band"><div class="wrap split">
+    <div class="dragon-visual">
+      <img src="assets/images/dragon%20fruit.png" alt="Fresh dragon fruit, whole and sliced to show its vivid pink flesh" loading="lazy" decoding="async">
+    </div>
+    <div>
+      <span class="tag">Also from our farm</span>
+      <h2>Dragon fruit</h2>
+      <p>Bright pink skin, delicate sweetness and a refreshing bite. Enjoy dragon fruit chilled on its own, sliced into fruit bowls or blended into a smoothie.</p>
+      <ul class="facts">
+        <li><b>Fresh and vibrant</b>A naturally colorful addition to your table</li>
+        <li><b>Mildly sweet</b>Enjoy it fresh or chilled</li>
+      </ul>
+    </div>
+  </div></section>
+
+  <section id="order"><div class="wrap">
+    <div class="center">
+      <span class="tag">Place a request</span>
+      <h2>Want to buy? Tell us how to reach you.</h2>
+      <p class="muted">Send your name and number and we’ll call you back. Or message us right away.</p>
+    </div>
+    <div class="formbox">
+      <form id="f" novalidate>
+        <label for="n">Your name</label>
+        <input id="n" name="name" autocomplete="name" placeholder="e.g. Anita Rao" required>
+        <label for="p">Phone number</label>
+        <input id="p" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. 98765 43210" required>
+        <label for="i">What would you like? (optional)</label>
+        <select id="i" name="item"><option>Purple sweet potato</option><option>Dragon fruit</option></select>
+        <button class="btn btn-p" id="sb" style="width:100%;justify-content:center" type="submit">Send my request</button>
+        <div id="m" class="msg" role="status"></div>
+      </form>
+      <div class="or">or</div>
+      <a class="btn btn-wa wa-link" target="_blank" rel="noopener" style="width:100%;justify-content:center">Order on WhatsApp</a>
+    </div>
+  </div></section>
+</main>
+
+<!-- CONTACT -->
+<main id="contactview" class="view">
+  <section><div class="wrap">
+    <span class="tag">Contact</span>
+    <h2>We’d love to hear from you</h2>
+    <p class="muted">Questions about bulk orders, delivery or what’s fresh this week? Reach us any way you like.</p>
+    <div class="cgrid">
+      <div class="card"><div class="ic" style="background:#e3efdc">📞</div><h3>Call or WhatsApp</h3><p id="cphone"><a href="tel:+919341029015">+91 93410 29015</a></p></div>
+      <div class="card"><div class="ic" style="background:#e3efdc">✉️</div><h3>Email</h3><p><a href="mailto:anishsshivanagere@gmail.com">anishsshivanagere@gmail.com</a></p></div>
+      <div class="card"><div class="ic" style="background:#e3efdc">📍</div><h3>Visit the farm</h3><p>Sira, Tumkur district</p></div>
+    </div>
+    <div class="cta"><a class="btn btn-wa wa-link" target="_blank" rel="noopener">Chat on WhatsApp</a><button class="btn btn-p" data-go="order">Request to buy</button></div>
+  </div></section>
+</main>
+
+<footer>© 2026 Violet Roots · Fresh from our farm to your table</footer>
+<a class="float wa-link" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
