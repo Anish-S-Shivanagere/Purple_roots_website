@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Violet Roots | Purple Sweet Potatoes & Dragon Fruit</title>
+<title>Violet Roots | Purple Sweet Potatoes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -20,6 +20,16 @@
 
 <!-- HOME -->
 <main id="home" class="view on">
+  <section class="buy-banner" aria-label="Purple sweet potato enquiry">
+    <div class="wrap buy-banner-inner">
+      <div>
+        <span class="buy-banner-kicker">Fresh from our farm</span>
+        <h2>Buy purple sweet potatoes</h2>
+        <p>Interested in an order? Enquire for availability, quantity and delivery.</p>
+      </div>
+      <button class="btn btn-p" data-go="order">Make an enquiry</button>
+    </div>
+  </section>
   <div class="hero">
     <div class="farm" id="farm"><div class="sun"></div><div class="hill h1"></div><div class="hill h2"></div><div class="rows"></div></div>
     <video id="vid" autoplay muted loop playsinline preload="auto" aria-hidden="true">
@@ -34,7 +44,7 @@
         <a class="btn btn-wa wa-link" target="_blank" rel="noopener">Chat on WhatsApp</a>
       </div>
     </div>
-    <div class="scroll">Scroll ↓</div>
+    <button class="scroll" type="button" data-go="about" aria-label="Scroll to purple sweet potato details">Scroll to explore <span aria-hidden="true">↓</span></button>
   </div>
 
   <section id="about"><div class="wrap split">
@@ -67,25 +77,10 @@
     </div>
   </div></section>
 
-  <section id="dragon-fruit" class="band"><div class="wrap split">
-    <div class="dragon-visual">
-      <img src="assets/images/dragon%20fruit.png" alt="Fresh dragon fruit, whole and sliced to show its vivid pink flesh" loading="lazy" decoding="async">
-    </div>
-    <div>
-      <span class="tag">Also from our farm</span>
-      <h2>Dragon fruit</h2>
-      <p>Bright pink skin, delicate sweetness and a refreshing bite. Enjoy dragon fruit chilled on its own, sliced into fruit bowls or blended into a smoothie.</p>
-      <ul class="facts">
-        <li><b>Fresh and vibrant</b>A naturally colorful addition to your table</li>
-        <li><b>Mildly sweet</b>Enjoy it fresh or chilled</li>
-      </ul>
-    </div>
-  </div></section>
-
   <section id="order"><div class="wrap">
     <div class="center">
-      <span class="tag">Place a request</span>
-      <h2>Want to buy? Tell us how to reach you.</h2>
+      <span class="tag">Purple sweet potato enquiries</span>
+      <h2>Interested in buying? Send us an enquiry.</h2>
       <p class="muted">Send your name and number and we’ll call you back. Or message us right away.</p>
     </div>
     <div class="formbox">
@@ -94,10 +89,10 @@
         <input id="n" name="name" autocomplete="name" placeholder="e.g. Anita Rao" required>
         <label for="p">Phone number</label>
         <input id="p" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. 98765 43210" required>
-        <label for="i">What would you like? (optional)</label>
-        <select id="i" name="item"><option>Purple sweet potato</option><option>Dragon fruit</option></select>
-        <button class="btn btn-p" id="sb" style="width:100%;justify-content:center" type="submit">Send my request</button>
-        <div id="m" class="msg" role="status"></div>
+        <label for="details">Order details (optional)</label>
+        <textarea id="details" name="details" rows="3" maxlength="500" placeholder="Quantity, delivery location, or any questions"></textarea>
+        <button class="btn btn-p" id="sb" style="width:100%;justify-content:center" type="submit">Send my enquiry</button>
+        <div id="m" class="msg" role="status" aria-live="polite"></div>
       </form>
       <div class="or">or</div>
       <a class="btn btn-wa wa-link" target="_blank" rel="noopener" style="width:100%;justify-content:center">Order on WhatsApp</a>

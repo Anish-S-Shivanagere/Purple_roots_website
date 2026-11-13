@@ -80,12 +80,12 @@ f.addEventListener("submit",async e=>{
   try{
     if(convexHttpUrl){
       const r=await fetch(convexHttpUrl+"/request",{method:"POST",headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({name,phone,item:f.item.value})});
+        body:JSON.stringify({name,phone,details:f.details.value.trim()})});
       if(!r.ok)throw new Error("fail");
     }
-    say("Thank you, "+name+"! We’ll call you soon.","ok");f.reset();
+    say("Thank you, "+name+"! Your enquiry is on its way. We’ll get back to you soon.","ok");f.reset();
   }catch(err){
     say("Something went wrong. Please try WhatsApp instead.","err");
   }
-  sb.disabled=false;sb.textContent="Send my request";
+  sb.disabled=false;sb.textContent="Send my enquiry";
 });

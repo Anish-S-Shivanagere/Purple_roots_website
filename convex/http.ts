@@ -21,14 +21,21 @@ http.route({
   path: "/request",
   method: "POST",
   handler: httpAction(async (ctx, req) => {
-    const { name, phone, item } = await req.json();
+    const { name, phone, details } = await req.json();
     if (!name || !phone || String(phone).replace(/\D/g, "").length < 10) {
       return new Response("Invalid input", { status: 400, headers: cors });
     }
+    const enquiryDetails = String(details ?? "").slice(0, 500);
     await ctx.runMutation(internal.requests.add, {
       name: String(name).slice(0, 80),
       phone: String(phone).slice(0, 20),
-      item: String(item ?? "").slice(0, 80),
+      item: "Purple sweet potato",
+      details: enquiryDetails,
+    });
+    await ctx.runAction(internal.email.sendEnquiryEmail, {
+      name: String(name).slice(0, 80),
+      phone: String(phone).slice(0, 20),
+      details: enquiryDetails,
     });
     return new Response(JSON.stringify({ ok: true }), {
       status: 200,

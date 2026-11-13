@@ -9,6 +9,7 @@
  */
 
 import type * as http from "../http.js";
+import type * as email from "../email.js";
 import type * as requests from "../requests.js";
 
 import type {
@@ -19,6 +20,7 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   http: typeof http;
+  email: typeof email;
   requests: typeof requests;
 }>;
 
